@@ -1,9 +1,12 @@
 # Importando pacotes necessários
 import discord
 from discord.ext import commands
+import os
+import sys
 
-# Credenciais
-Token = "OTE2NzA2MjU4NjU0OTg2Mjgw.YauDOw.9qMaYiF71_v6BrATEV3on0QoAeo"
+
+# Credenciais 
+Token = open(os.path.join(os.path.dirname(sys.argv[0]),'credential.txt')).read()
 
 # Prefixo de comando estabelecido
 bot = commands.Bot(command_prefix='%')
